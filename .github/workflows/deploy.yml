@@ -44,8 +44,8 @@ jobs:
       - name: Assemble deployment
         run: |
           mkdir -p site
-          touch index.html 
-          echo "<h1>Welcome</h1> <a href='./web'>Web</a> <a href='./admin'>Admin</a>" > index.html
+          touch site/index.html 
+          echo "<h1>Welcome</h1> <a href='./web'>Web</a> <a href='./admin'>Admin</a>" > site/index.html
 
           cp -r apps/admin/dist site/admin
           cp -r apps/web/dist site/web
