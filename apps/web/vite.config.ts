@@ -3,6 +3,6 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/mono-web",
+  base: "/my-monorepo/web",
   plugins: [react()],
 });
