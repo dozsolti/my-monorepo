@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "apps/website/**"
+      - "apps/web/**"
       - "packages/**"
       - "package.json"
       - "bun.lock"
@@ -40,7 +40,7 @@ jobs:
         id: pages
 
       - name: Build website
-        working-directory: apps/website
+        working-directory: apps/web
         env:
           VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
         run: bun run build
@@ -48,7 +48,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: apps/website/dist
+          path: apps/web/dist
 
   deploy:
     environment:
